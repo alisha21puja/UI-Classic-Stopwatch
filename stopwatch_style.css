@@ -1,41 +1,100 @@
 /* Google fonts import link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-/**** global reset ****/
+/* Reset and global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
-/**** body ****/
 body {
-  background: linear-gradient(to right, #00dbde, #fc00ff);
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(to right, #00dbde, #fc00ff);
 }
 
-/**** card ****/
+/* Card styles */
 .card {
   border: none;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
 }
 
 .card-body {
-  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
 }
 
-/**** time ****/
-.time span {
+/* Button styles */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+  transform: translateY(-3px);
+}
+
+.btn-danger {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: linear-gradient(to right, #FF512F, #DD2476);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(to right, #FF512F, #DD2476);
+  transform: translateY(-3px);
+}
+
+/* Time styles */
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
   font-size: 60px;
   font-weight: 600;
   color: #ce1414;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.time span {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .time span.colon,
@@ -44,36 +103,24 @@ body {
   font-size: 50px;
 }
 
-/**** button ****/
-.buttons button {
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 50px;
-  padding: 10px 30px;
-  margin: 10px;
-  transition: transform 0.3s ease;
-}
-
+/* Hover animation for buttons */
 .buttons button:hover {
   transform: translateY(-5px);
 }
 
-.btn-primary {
-  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
-  border: none;
-}
-
-.btn-danger {
-  background: linear-gradient(to right, #ff512f, #dd2476);
-  border: none;
-}
-
-.btn-secondary {
-  background: linear-gradient(to right, #FF512F, #DD2476);
-  border: none;
-}
-
-.btn-primary:hover, .btn-danger:hover, .btn-secondary:hover {
-  background-size: 200% auto;
-  background-position: right center;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .card {
+    max-width: 300px;
+  }
+  
+  .time {
+    font-size: 40px;
+  }
+  
+  .time span.colon,
+  .time span.ms-colon,
+  .time span.millisecond {
+    font-size: 30px;
+  }
 }
